@@ -5,20 +5,11 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain import hub
 from langchain.chat_models import ChatOpenAI
 from langchain.schema.runnable import RunnablePassthrough
-from langchain.document_loaders import WebBaseLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 
 def load_pdf_and_split(path):
     loader = PyPDFLoader(path)
     pages = loader.load_and_split()
-    return pages
-
-def load_url_and_split(url):
-    loader = WebBaseLoader(url)
-    data = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size = 500, chunk_overlap = 0)
-    pages = text_splitter.split_documents(data)
     return pages
 
 

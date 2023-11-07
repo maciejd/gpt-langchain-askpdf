@@ -1,24 +1,23 @@
 FROM python:3.9-slim
 
-# making directory of app
+# create directory for app
 WORKDIR /app
 
 RUN apt-get update
 
-# exposing default port for streamlit
+# expose default port for streamlit
 EXPOSE 8501
 
-# copy over requirements
+# copy requirements
 COPY requirements.txt ./requirements.txt
 
-# install pip then packages
+# install pip and required packages
 RUN pip3 install -r requirements.txt
 
-# copying all files over
-#COPY . .
+# copy project files
 COPY app.py ./app.py
 COPY llm.py ./llm.py
 COPY .env ./.env 
 
-# cmd to launch app when container is run
+# launch app
 CMD streamlit run app.py

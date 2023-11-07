@@ -19,3 +19,7 @@ OPENAI_API_KEY="YOUR_API_KEY"
 
 ## More info
 The app leverages Retrieval-augmented generation (RAG). More info can be found [here](https://python.langchain.com/docs/use_cases/question_answering/)
+
+## Screenshot
+
+![app_screenshot](https://github.com/maciejd/gpt-langchain-askpdf/assets/4822710/1ee5d257-f557-4933-9a98-d7bf98af8f3f)

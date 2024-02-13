@@ -6,7 +6,7 @@ import llm
 
 def run_app():
     # load API keys as global variables
-    dotenv.load_dotenvF()
+    dotenv.load_dotenv()
 
     st.title("My AI app")
 
